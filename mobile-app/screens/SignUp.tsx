@@ -1,7 +1,14 @@
-import React from 'react'
-import { StyleSheet, Text, View, Image, StatusBar } from 'react-native'
+import React, { useState } from 'react'
+import { StyleSheet, Text, View, Image, StatusBar, TouchableOpacity } from 'react-native'
+
+enum Profile {
+  teacher = 'teacher',
+  student = 'student',
+}
 
 const SignUp = () => {
+  const [profile, setProfile] = useState<Profile>()
+
   return (
     <View style={styles.container}>
       <StatusBar />
@@ -22,18 +29,22 @@ const SignUp = () => {
       </Text>
 
       <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-        <View>
-          <View style={styles.imageContainer}>
+        <TouchableOpacity onPress={() => setProfile(Profile.teacher)}>
+          <View
+            style={[styles.imageContainer, profile === Profile.teacher ? { opacity: 0.5 } : {}]}
+          >
             <Image style={styles.image} source={require('../assets/teacher.png')} />
           </View>
           <Text style={[styles.text, { textAlign: 'center' }]}>PROFESSOR</Text>
-        </View>
-        <View>
-          <View style={styles.imageContainer}>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => setProfile(Profile.student)}>
+          <View
+            style={[styles.imageContainer, profile === Profile.student ? { opacity: 0.5 } : {}]}
+          >
             <Image style={styles.image} source={require('../assets/student.png')} />
           </View>
           <Text style={[styles.text, { textAlign: 'center' }]}>ALUNO</Text>
-        </View>
+        </TouchableOpacity>
       </View>
 
       <View style={styles.footer}>
