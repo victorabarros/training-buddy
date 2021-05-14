@@ -1,11 +1,10 @@
-import React from 'react'
-import { StyleSheet } from 'react-native'
-import SignUp from './screens/SignUp'
+import React, { useState } from 'react'
+import SignUp from './screens/SignUp/index'
 
 const App = () => {
-  return <SignUp />
-}
+  const [isAuthenticated, setIsAuthenticated] = useState(true)
 
-const styles = StyleSheet.create({})
+  return isAuthenticated ? <SignUp /> : <></>
+}
 
 export default App
