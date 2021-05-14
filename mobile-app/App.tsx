@@ -1,10 +1,11 @@
 import React from 'react'
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { StyleSheet, Text, View, Image, StatusBar } from 'react-native'
 
 const App = () => {
   return (
     <View style={styles.container}>
-      <Text style={{ fontSize: 13, textAlign: 'justify' }}>
+      <StatusBar />
+      <Text style={styles.text}>
         Bem vindo ao Training Buddy!
         {'\n\n'}
         Aqui você encontra colegas para treinar com você, profissionais qualificados e pode alugar
@@ -25,19 +26,19 @@ const App = () => {
           <View style={styles.imageContainer}>
             <Image style={styles.image} source={require('./assets/teacher.png')} />
           </View>
-          <Text style={{ textAlign: 'center', fontSize: 13 }}>PROFESSOR</Text>
+          <Text style={[styles.text, { textAlign: 'center' }]}>PROFESSOR</Text>
         </View>
         <View>
           <View style={styles.imageContainer}>
             <Image style={styles.image} source={require('./assets/student.png')} />
           </View>
-          <Text style={{ textAlign: 'center', fontSize: 13 }}>ALUNO</Text>
+          <Text style={[styles.text, { textAlign: 'center' }]}>ALUNO</Text>
         </View>
       </View>
 
-      <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
-        <Text style={{ fontSize: 18 }}>{'<'}</Text>
-        <Text style={{ fontSize: 13 }}>1/3 PASSOS</Text>
+      <View style={styles.footer}>
+        <Text style={{ fontSize: 18, color: 'white' }}>{'<'}</Text>
+        <Text style={styles.text}>1/3 PASSOS</Text>
         <Text style={{ fontSize: 18 }}>{'>'}</Text>
       </View>
     </View>
@@ -51,6 +52,12 @@ const styles = StyleSheet.create({
     paddingTop: 50,
     justifyContent: 'space-between',
   },
+  text: {
+    fontSize: 13,
+    lineHeight: 19,
+    textAlign: 'justify',
+    fontFamily: 'monospace',
+  },
   imageContainer: {
     backgroundColor: 'white',
     padding: 5,
@@ -61,6 +68,10 @@ const styles = StyleSheet.create({
   image: {
     width: 95,
     height: 120,
+  },
+  footer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
   },
 })
 
