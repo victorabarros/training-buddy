@@ -7,10 +7,10 @@ const LogIn = () => {
   const navigation = useNavigation()
   return (
     <>
-  {/* <Text>login</Text> */}
+      <Text>login</Text>
 
-  <BottomTab stage={2}/>
-  </>
+      <BottomTab stage={2} />
+    </>
   )
 }
 

@@ -51,9 +51,12 @@ const ProfileChoicer = () => {
         </TouchableOpacity>
       </View>
 
-      <BottomTab stage={1} nextArrowOnPressed={() => {
-            navigation.navigate('LogInScreen')
-          }}/>
+      <BottomTab
+        stage={1}
+        nextArrowOnPressed={() => {
+          navigation.navigate('LogInScreen')
+        }}
+      />
     </View>
   )
 }
