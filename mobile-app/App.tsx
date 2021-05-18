@@ -1,10 +1,15 @@
 import React, { useState } from 'react'
-import SignUp from './screens/SignUp/index'
+import SignUp from './src/screens/SignUp/index'
 
 const App = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(true)
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
 
-  return isAuthenticated ? <SignUp /> : <></>
+  if (!isAuthenticated) {
+    return <SignUp />
+  }
+
+  // redirect to home
+  return <></>
 }
 
 export default App
