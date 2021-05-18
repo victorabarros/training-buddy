@@ -7,7 +7,7 @@ const App = () => {
 
   if (!isAuthenticated) {
     return (
-      <View style={{flex: 1}}>
+      <View style={{ flex: 1 }}>
         <SignUpStack />
       </View>
     )

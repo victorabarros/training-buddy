@@ -1,4 +1,4 @@
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native'
 import React, { useState } from 'react'
 import { StyleSheet, Text, View, Image, StatusBar, TouchableOpacity } from 'react-native'
 
@@ -8,7 +8,7 @@ enum Profile {
 }
 
 const ProfileChoicer = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation()
   const [profile, setProfile] = useState<Profile>()
 
   return (
@@ -55,7 +55,9 @@ const ProfileChoicer = () => {
         <Text style={styles.text}>1/3 PASSOS</Text>
         <Text
           style={styles.bottomButton}
-          onPress={() => {navigation.navigate('LogInScreen')}}
+          onPress={() => {
+            navigation.navigate('LogInScreen')
+          }}
         >
           {'>'}
         </Text>
