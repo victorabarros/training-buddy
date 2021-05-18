@@ -1,11 +1,16 @@
 import React, { useState } from 'react'
-import SignUp from './src/screens/SignUp/index'
+import { View } from 'react-native'
+import SignUpStack from './src/router/SignUpStack'
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
 
   if (!isAuthenticated) {
-    return <SignUp />
+    return (
+      <View style={{flex: 1}}>
+        <SignUpStack />
+      </View>
+    )
   }
 
   // redirect to home

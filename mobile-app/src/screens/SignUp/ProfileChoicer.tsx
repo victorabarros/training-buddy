@@ -1,6 +1,6 @@
+import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react'
 import { StyleSheet, Text, View, Image, StatusBar, TouchableOpacity } from 'react-native'
-import { useHistory } from 'react-router'
 
 enum Profile {
   teacher = 'teacher',
@@ -8,9 +8,9 @@ enum Profile {
 }
 
 const ProfileChoicer = () => {
-  const history = useHistory()
-
+  const navigation = useNavigation();
   const [profile, setProfile] = useState<Profile>()
+
   return (
     <View style={styles.container}>
       <StatusBar />
@@ -30,15 +30,16 @@ const ProfileChoicer = () => {
         Então vamos lá, qual perfil você quer ser cadastrar?
       </Text>
 
-      <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-        <TouchableOpacity onPress={() => setProfile(Profile.teacher)}>
+      <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
+        {/* IN FIRST MOMENT ONLY SIGNUP FOR STUDENTS, USE justifyContent: 'space-between' */}
+        {/* <TouchableOpacity onPress={() => setProfile(Profile.teacher)}>
           <View
             style={[styles.imageContainer, profile === Profile.teacher ? { opacity: 0.5 } : {}]}
           >
             <Image style={styles.image} source={require('../../../assets/teacher.png')} />
           </View>
           <Text style={[styles.text, { textAlign: 'center' }]}>PROFESSOR</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
         <TouchableOpacity onPress={() => setProfile(Profile.student)}>
           <View
             style={[styles.imageContainer, profile === Profile.student ? { opacity: 0.5 } : {}]}
@@ -54,10 +55,7 @@ const ProfileChoicer = () => {
         <Text style={styles.text}>1/3 PASSOS</Text>
         <Text
           style={styles.bottomButton}
-          onPress={() => {
-            console.log('click')
-            history.push('/signup/login')
-          }}
+          onPress={() => {navigation.navigate('LogInScreen')}}
         >
           {'>'}
         </Text>
@@ -68,9 +66,8 @@ const ProfileChoicer = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     padding: 30,
-    paddingTop: 50,
+    paddingTop: 40,
     justifyContent: 'space-between',
   },
   text: {
