@@ -1,6 +1,7 @@
 import { useNavigation } from '@react-navigation/native'
 import React, { useState } from 'react'
 import { StyleSheet, Text, View, Image, StatusBar, TouchableOpacity } from 'react-native'
+import BottomTab from './BottomTab'
 
 enum Profile {
   teacher = 'teacher',
@@ -50,18 +51,9 @@ const ProfileChoicer = () => {
         </TouchableOpacity>
       </View>
 
-      <View style={styles.bottomContainer}>
-        <Text style={[styles.bottomButton, { color: 'white' }]}>{'<'}</Text>
-        <Text style={styles.text}>1/3 PASSOS</Text>
-        <Text
-          style={styles.bottomButton}
-          onPress={() => {
+      <BottomTab stage={1} nextArrowOnPressed={() => {
             navigation.navigate('LogInScreen')
-          }}
-        >
-          {'>'}
-        </Text>
-      </View>
+          }}/>
     </View>
   )
 }
@@ -88,16 +80,6 @@ const styles = StyleSheet.create({
   image: {
     width: 95,
     height: 120,
-  },
-  bottomContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-  },
-  bottomButton: {
-    fontSize: 18,
-    width: 25,
-    borderRadius: 12.5,
-    textAlign: 'center',
   },
 })
 
