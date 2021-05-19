@@ -63,6 +63,7 @@ const ProfileChoicer = () => {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     padding: 30,
     paddingTop: 40,
     justifyContent: 'space-between',
