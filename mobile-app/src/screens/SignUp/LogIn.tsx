@@ -9,7 +9,7 @@ const LogIn = () => {
       <View>
         <View
           style={{
-            height: 381,
+            height: 290,
             backgroundColor: '#3991E2',
             padding: 25,
             justifyContent: 'space-between',
@@ -31,7 +31,62 @@ const LogIn = () => {
         </Svg>
       </View>
 
-      <View>{/* login with face, gmail or email */}</View>
+      <View>
+        <View
+          style={{
+            backgroundColor: '#D3D1D1',
+            padding: 5,
+            margin: 25,
+            alignSelf: 'center',
+            width: 230,
+            flexDirection: 'row',
+          }}
+        >
+          <Image
+            style={{ height: 23, width: 18, resizeMode: 'contain' }}
+            source={require('../../../assets/logo_facebook.png')}
+          />
+          <Text style={{ marginLeft: 4, color: '#1070C8', fontFamily: 'monospace', fontSize: 13 }}>
+            Fazer login com Facebook
+          </Text>
+        </View>
+        <View
+          style={{
+            backgroundColor: '#D3D1D1',
+            padding: 5,
+            margin: 25,
+            alignSelf: 'center',
+            width: 230,
+            flexDirection: 'row',
+          }}
+        >
+          <Image
+            style={{ height: 22, width: 16, resizeMode: 'contain' }}
+            source={require('../../../assets/logo_gmail.png')}
+          />
+          <Text style={{ marginLeft: 4, color: '#1070C8', fontFamily: 'monospace', fontSize: 13 }}>
+            Fazer login com gmail
+          </Text>
+        </View>
+        <View
+          style={{
+            backgroundColor: '#D3D1D1',
+            padding: 5,
+            margin: 25,
+            alignSelf: 'center',
+            width: 230,
+            flexDirection: 'row',
+          }}
+        >
+          <Image
+            style={{ height: 22, width: 20, resizeMode: 'contain' }}
+            source={require('../../../assets/logo_e_mail.png')}
+          />
+          <Text style={{ marginLeft: 4, color: '#1070C8', fontFamily: 'monospace', fontSize: 13 }}>
+            Fazer login com e-mail
+          </Text>
+        </View>
+      </View>
 
       <BottomTab stage={2} />
     </View>
