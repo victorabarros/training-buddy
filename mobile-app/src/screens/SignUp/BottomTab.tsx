@@ -20,17 +20,9 @@ const BottomTab = ({ stage, nextArrowOnPressed }: any) => {
 }
 
 const styles = StyleSheet.create({
-  text: {
-    fontSize: 13,
-    lineHeight: 19,
-    textAlign: 'justify',
-    fontFamily: 'monospace',
-  },
   container: {
     flexDirection: 'row',
-    position: 'absolute',
     alignSelf: 'center',
-    bottom: 10,
   },
   button: {
     fontSize: 18,
@@ -38,6 +30,12 @@ const styles = StyleSheet.create({
     borderRadius: 12.5,
     textAlign: 'center',
     marginHorizontal: 30,
+  },
+  text: {
+    fontSize: 13,
+    lineHeight: 19,
+    textAlign: 'justify',
+    fontFamily: 'monospace',
   },
 })
 
