@@ -1,11 +1,13 @@
 import React from 'react'
-import { StyleSheet, Text, View, Image } from 'react-native'
-import BottomTab from './BottomTab'
+import { Text, View, Image } from 'react-native'
+import BottomTab from '../../components/BottomTab'
 import Svg, { Ellipse } from 'react-native-svg'
+import styles from './styles'
 
 const LogIn = () => {
   return (
-    <View style={styles.container}>
+    <View style={styles.root}>
+      {/* header */}
       <View>
         <View
           style={{
@@ -31,6 +33,7 @@ const LogIn = () => {
         </Svg>
       </View>
 
+      {/* body */}
       <View>
         <View
           style={{
@@ -88,33 +91,10 @@ const LogIn = () => {
         </View>
       </View>
 
+      {/* footer */}
       <BottomTab stage={2} />
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'space-between',
-  },
-  text: {
-    fontSize: 13,
-    lineHeight: 19,
-    textAlign: 'justify',
-    fontFamily: 'monospace',
-  },
-  imageContainer: {
-    backgroundColor: 'white',
-    padding: 5,
-    margin: 10,
-    borderRadius: 15,
-    elevation: 5,
-  },
-  image: {
-    width: 95,
-    height: 120,
-  },
-})
 
 export default LogIn

@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native'
 
 const BottomTab = ({ stage, nextArrowOnPressed }: any) => {
   const navigation = useNavigation()
-  const backButtonExtraStyle = stage === 1 ? { color: 'white' } : {}
+  const backButtonExtraStyle = stage === 1 ? { color: '#E5E5E5' } : {}
 
   return (
     <View style={styles.container}>

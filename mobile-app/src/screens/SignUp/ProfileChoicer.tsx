@@ -1,7 +1,8 @@
 import { useNavigation } from '@react-navigation/native'
 import React, { useState } from 'react'
-import { StyleSheet, Text, View, Image, StatusBar, TouchableOpacity } from 'react-native'
-import BottomTab from './BottomTab'
+import { Text, View, Image, StatusBar, TouchableOpacity } from 'react-native'
+import BottomTab from '../../components/BottomTab'
+import styles from './styles'
 
 enum Profile {
   teacher = 'teacher',
@@ -13,7 +14,7 @@ const ProfileChoicer = () => {
   const [profile, setProfile] = useState<Profile>()
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.root, { padding: 30, paddingTop: 40 }]}>
       <StatusBar />
       <Text style={styles.text}>
         Bem vindo ao Training Buddy!
@@ -61,31 +62,5 @@ const ProfileChoicer = () => {
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 30,
-    paddingTop: 40,
-    justifyContent: 'space-between',
-  },
-  text: {
-    fontSize: 13,
-    lineHeight: 19,
-    textAlign: 'justify',
-    fontFamily: 'monospace',
-  },
-  imageContainer: {
-    backgroundColor: 'white',
-    padding: 5,
-    margin: 10,
-    borderRadius: 15,
-    elevation: 5,
-  },
-  image: {
-    width: 95,
-    height: 120,
-  },
-})
 
 export default ProfileChoicer
