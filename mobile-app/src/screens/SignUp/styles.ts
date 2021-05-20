@@ -6,6 +6,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     backgroundColor: '#E5E5E5',
   },
+  title: {
+    fontWeight: 'bold',
+    fontSize: 28,
+  },
   text: {
     fontSize: 13,
     lineHeight: 19,

@@ -2,16 +2,16 @@ import { useNavigation } from '@react-navigation/native'
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-const BottomTab = ({ stage, nextArrowOnPressed }: any) => {
+const BottomTab = ({ step, nextArrowOnPressed, totalSteps = 3 }: any) => {
   const navigation = useNavigation()
-  const backButtonExtraStyle = stage === 1 ? { color: '#E5E5E5' } : {}
+  const backButtonExtraStyle = step === 1 ? { color: '#E5E5E5' } : {}
 
   return (
     <View style={styles.container}>
       <Text style={[styles.button, backButtonExtraStyle]} onPress={navigation.goBack}>
         {'<'}
       </Text>
-      <Text style={styles.text}>{`${stage}/3 PASSOS`}</Text>
+      <Text style={styles.text}>{`${step}/${totalSteps} PASSOS`}</Text>
       <Text style={styles.button} onPress={nextArrowOnPressed}>
         {'>'}
       </Text>

@@ -53,7 +53,7 @@ const ProfileChoicer = () => {
       </View>
 
       <BottomTab
-        stage={1}
+        step={1}
         nextArrowOnPressed={() => {
           // validate if profile was chosed
           navigation.navigate('LogInScreen')
