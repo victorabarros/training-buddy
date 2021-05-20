@@ -5,6 +5,7 @@ import { StyleSheet, Text, View } from 'react-native'
 const BottomTab = ({ step, nextArrowOnPressed, totalSteps = 3 }: any) => {
   const navigation = useNavigation()
   const backButtonExtraStyle = step === 1 ? { color: '#E5E5E5' } : {}
+  const nextButtonExtraStyle = step === totalSteps ? { color: '#E5E5E5' } : {}
 
   return (
     <View style={styles.container}>
@@ -12,7 +13,7 @@ const BottomTab = ({ step, nextArrowOnPressed, totalSteps = 3 }: any) => {
         {'<'}
       </Text>
       <Text style={styles.text}>{`${step}/${totalSteps} PASSOS`}</Text>
-      <Text style={styles.button} onPress={nextArrowOnPressed}>
+      <Text style={[styles.button, nextButtonExtraStyle]} onPress={nextArrowOnPressed}>
         {'>'}
       </Text>
     </View>

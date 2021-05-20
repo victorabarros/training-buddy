@@ -14,7 +14,7 @@ const ProfileChoicer = () => {
   const [profile, setProfile] = useState<Profile>()
 
   return (
-    <View style={[styles.root, { padding: 30, paddingTop: 40 }]}>
+    <View style={[styles.root, { padding: 30, paddingTop: 40, paddingBottom: 20 }]}>
       <StatusBar />
       <Text style={styles.text}>
         Bem vindo ao Training Buddy!

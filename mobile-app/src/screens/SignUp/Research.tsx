@@ -5,8 +5,9 @@ import BottomTab from '../../components/BottomTab'
 import Svg, { Ellipse } from 'react-native-svg'
 import styles from './styles'
 
-const LogIn = () => {
-  const navigation = useNavigation()
+const Research = () => {
+  const name = 'NOME'
+
   return (
     <View style={[styles.root, { paddingBottom: 20 }]}>
       {/* header */}
@@ -26,8 +27,13 @@ const LogIn = () => {
               source={require('../../../assets/login_logo.png')}
             />
           </View>
+
           <Text style={styles.text}>
-            Agora que você já escolheu seu perfil, precisamos que crie um email e senha de acesso.
+            {`${name}`}, agora queremos saber mais sobre você. Esolha as opções abaixo para sabermos
+            que esportes está interessado.
+            {'\n\n'}
+            Permita acessarmos a sua localização para ajudarmos você a encontrar grupos mais
+            próximos de você.
           </Text>
         </View>
         <Svg height="65" width="100%">
@@ -36,58 +42,44 @@ const LogIn = () => {
       </View>
 
       {/* body */}
-      <View>
+      <View style={extraStyles.body}>
         <TouchableOpacity style={extraStyles.button} onPress={() => alert('not implemented yeat')}>
-          <Image
-            style={{ height: 23, width: 18, resizeMode: 'contain' }}
-            source={require('../../../assets/logo_facebook.png')}
-          />
-          <Text style={extraStyles.buttonLabel}>Fazer login com Facebook</Text>
+          <Text style={[styles.text, { color: 'white' }]}>SURF</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={extraStyles.button} onPress={() => alert('not implemented yeat')}>
-          <Image
-            style={{ height: 22, width: 16, resizeMode: 'contain' }}
-            source={require('../../../assets/logo_gmail.png')}
-          />
-          <Text style={extraStyles.buttonLabel}>Fazer login com gmail</Text>
+          <Text style={[styles.text, { color: 'white' }]}>TÊNIS</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={extraStyles.button} onPress={() => alert('not implemented yeat')}>
-          <Image
-            style={{ height: 22, width: 20, resizeMode: 'contain' }}
-            source={require('../../../assets/logo_e_mail.png')}
-          />
-          <Text style={extraStyles.buttonLabel}>Fazer login com e-mail</Text>
+          <Text style={[styles.text, { color: 'white' }]}>CANOAGEM</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={extraStyles.button} onPress={() => alert('not implemented yeat')}>
+          <Text style={[styles.text, { color: 'white' }]}>CROSSFIT</Text>
         </TouchableOpacity>
       </View>
 
       {/* footer */}
-      <BottomTab
-        step={2}
-        nextArrowOnPressed={() => {
-          navigation.navigate('ResearchScreen')
-        }}
-      />
+      <BottomTab step={3} />
     </View>
   )
 }
 
 const extraStyles = StyleSheet.create({
-  button: {
-    backgroundColor: '#D3D1D1',
-    padding: 5,
-    margin: 25,
-    alignSelf: 'center',
-    width: 230,
-    flexDirection: 'row',
+  body: {
+    height: 250,
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
-  buttonLabel: {
-    marginLeft: 4,
-    color: '#1070C8',
-    fontFamily: 'monospace',
-    fontSize: 13,
+  button: {
+    height: 26,
+    width: 115,
+    backgroundColor: '#5F5F5F',
+    borderRadius: 23,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 })
 
-export default LogIn
+export default Research
