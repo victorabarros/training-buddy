@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { View } from 'react-native'
-import SignUpStack from './src/router/SignUpStack'
+import Router from './src/router'
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
@@ -8,7 +8,7 @@ const App = () => {
   if (!isAuthenticated) {
     return (
       <View style={{ flex: 1 }}>
-        <SignUpStack />
+        <Router />
       </View>
     )
   }

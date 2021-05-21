@@ -9,13 +9,11 @@ const Stack = createStackNavigator()
 
 const SignUpStack = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="ProfileChoicerScreen">
         <Stack.Screen component={ProfileChoicer} name="ProfileChoicerScreen" />
         <Stack.Screen component={LogIn} name="LogInScreen" />
         <Stack.Screen component={Research} name="ResearchScreen" />
       </Stack.Navigator>
-    </NavigationContainer>
   )
 }
 

@@ -1,18 +1,20 @@
-// import React from 'react';
-// import {NavigationContainer} from '@react-navigation/native';
-// import {createStackNavigator} from '@react-navigation/stack';
-// import BottomTabNav from './bottomTabNav';
+import React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import SignUpStack from './SignUpStack';
+import BottomTabNav from './BottomTabNav';
 
-// const Stack = createStackNavigator();
+const Router = () => {
+  const Drawer = createDrawerNavigator();
 
-// const Router = () => {
-//   return (
-//     <NavigationContainer>
-//       <Stack.Navigator screenOptions={{headerShown: false}}>
-//         <Stack.Screen component={BottomTabNav} name="HomeTabs" />
-//       </Stack.Navigator>
-//     </NavigationContainer>
-//   );
-// };
+  return (
+    <NavigationContainer>
+      <Drawer.Navigator>
+        <Drawer.Screen name="SignUp" component={SignUpStack} />
+        <Drawer.Screen name="BottomTab" component={BottomTabNav} />
+      </Drawer.Navigator>
+    </NavigationContainer>
+  );
+};
 
-// export default Router;
+export default Router;
