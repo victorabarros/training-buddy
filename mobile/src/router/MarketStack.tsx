@@ -6,11 +6,11 @@ const Stack = createStackNavigator()
 
 const MarketStack = () => {
   return (
-      <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="MarketHomeScreen">
-        <Stack.Screen component={MarketHome} name="MarketHomeScreen" />
-        {/* <Stack.Screen component={MarketSearch} name="MarketSearchScreen" />
+    <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="MarketHomeScreen">
+      <Stack.Screen component={MarketHome} name="MarketHomeScreen" />
+      {/* <Stack.Screen component={MarketSearch} name="MarketSearchScreen" />
         <Stack.Screen component={MarketMostSearcheds} name="MarketMostSearchedsScreen" /> */}
-      </Stack.Navigator>
+    </Stack.Navigator>
   )
 }
 

@@ -1,11 +1,11 @@
-import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import SignUpStack from './SignUpStack';
-import BottomTabNav from './BottomTabNav';
+import React from 'react'
+import { NavigationContainer } from '@react-navigation/native'
+import { createDrawerNavigator } from '@react-navigation/drawer'
+import SignUpStack from './SignUpStack'
+import BottomTabNav from './BottomTabNav'
 
 const Router = () => {
-  const Drawer = createDrawerNavigator();
+  const Drawer = createDrawerNavigator()
 
   return (
     <NavigationContainer>
@@ -14,7 +14,7 @@ const Router = () => {
         <Drawer.Screen name="BottomTab" component={BottomTabNav} />
       </Drawer.Navigator>
     </NavigationContainer>
-  );
-};
+  )
+}
 
-export default Router;
+export default Router

@@ -63,12 +63,7 @@ const LogIn = () => {
       </View>
 
       {/* footer */}
-      <BottomTab
-        step={2}
-        nextArrowOnPressed={() => {
-          navigation.navigate('ResearchScreen')
-        }}
-      />
+      <BottomTab step={2} nextArrowOnPressed={() => navigation.navigate('ResearchScreen')} />
     </View>
   )
 }

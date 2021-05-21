@@ -1,18 +1,21 @@
-import React from 'react';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import React from 'react'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 // import Entypo from 'react-native-vector-icons/Entypo';
-import MarketStack from './MarketStack';
+import MarketStack from './MarketStack'
 
-const Tab = createBottomTabNavigator();
+const Tab = createBottomTabNavigator()
 
 const BottomTabNav = () => {
   return (
     <Tab.Navigator
-      tabBarOptions={{
-        // showLabel: false,
-        // inactiveTintColor: '#ffbd7d',
-        // activeTintColor: '#e47911',
-      }}>
+      tabBarOptions={
+        {
+          // showLabel: false,
+          // inactiveTintColor: '#ffbd7d',
+          // activeTintColor: '#e47911',
+        }
+      }
+    >
       <Tab.Screen
         component={MarketStack}
         name="market"
@@ -22,9 +25,9 @@ const BottomTabNav = () => {
         //   ),
         // }}
       />
-{/*
+      {/*
       <Tab.Screen
-        component={SettingsScreen}
+        component={SettingsStack}
         name="settings"
         options={{
           tabBarIcon: ({color}) => (
@@ -33,7 +36,7 @@ const BottomTabNav = () => {
         }}
       />*/}
     </Tab.Navigator>
-  );
-};
+  )
+}
 
-export default BottomTabNav;
+export default BottomTabNav

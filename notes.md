@@ -47,6 +47,6 @@ yarn add prettier
 ## TODO
 
 - backend with typescript and mongodb
-- find for how deploy mobile app in a android/iphone simulator (does exist a docker container to this?)
+- find for how deploy mobile app in a android/iphone simulator (does exist a docker container to this? https://snack.expo.io/ )
 - remake web with [nextjs](https://nextjs.org/)
 - deploy web on vercel

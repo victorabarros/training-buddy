@@ -6,7 +6,9 @@ import Svg, { Ellipse } from 'react-native-svg'
 import styles from './styles'
 
 const Research = () => {
+  const navigation = useNavigation()
   const name = 'NOME'
+  const sports = ['SURF', 'TENIS', 'CANOAGEM', 'CROSSFIT']
 
   return (
     <View style={[styles.root, { paddingBottom: 20 }]}>
@@ -23,7 +25,13 @@ const Research = () => {
           <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
             <Text style={styles.title}>Training Buddy</Text>
             <Image
-              style={{ width: 110, height: 100, resizeMode: 'contain', borderRadius: 27 }}
+              style={{
+                width: 110,
+                height: 100,
+                resizeMode: 'contain',
+                borderRadius: 27,
+                marginBottom: 10,
+              }}
               source={require('../../../assets/login_logo.png')}
             />
           </View>
@@ -43,21 +51,17 @@ const Research = () => {
 
       {/* body */}
       <View style={extraStyles.body}>
-        <TouchableOpacity style={extraStyles.button} onPress={() => alert('not implemented yeat')}>
-          <Text style={[styles.text, { color: 'white' }]}>SURF</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={extraStyles.button} onPress={() => alert('not implemented yeat')}>
-          <Text style={[styles.text, { color: 'white' }]}>TÊNIS</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={extraStyles.button} onPress={() => alert('not implemented yeat')}>
-          <Text style={[styles.text, { color: 'white' }]}>CANOAGEM</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={extraStyles.button} onPress={() => alert('not implemented yeat')}>
-          <Text style={[styles.text, { color: 'white' }]}>CROSSFIT</Text>
-        </TouchableOpacity>
+        {sports.map(sport => (
+          <TouchableOpacity
+            key={`touch-${sport.toLowerCase()}`}
+            style={extraStyles.button}
+            onPress={() => navigation.navigate('BottomTab')}
+          >
+            <Text key={`text-${sport.toLowerCase()}`} style={[styles.text, { color: 'white' }]}>
+              {sport}
+            </Text>
+          </TouchableOpacity>
+        ))}
       </View>
 
       {/* footer */}
