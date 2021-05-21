@@ -1,7 +1,8 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-// import Entypo from 'react-native-vector-icons/Entypo';
+import Entypo from 'react-native-vector-icons/Entypo';
 import MarketStack from './MarketStack'
+import SettingStack from './SettingStack';
 
 const Tab = createBottomTabNavigator()
 
@@ -10,7 +11,7 @@ const BottomTabNav = () => {
     <Tab.Navigator
       tabBarOptions={
         {
-          // showLabel: false,
+          showLabel: false,
           // inactiveTintColor: '#ffbd7d',
           // activeTintColor: '#e47911',
         }
@@ -19,22 +20,23 @@ const BottomTabNav = () => {
       <Tab.Screen
         component={MarketStack}
         name="market"
-        // options={{
-        //   tabBarIcon: ({color}) => (
-        //     <Entypo name="home" color={color} size={25} />
-        //   ),
-        // }}
-      />
-      {/*
-      <Tab.Screen
-        component={SettingsStack}
-        name="settings"
         options={{
           tabBarIcon: ({color}) => (
-            <Entypo name="user" color={color} size={25} />
+            <Entypo name="home" color={color} size={25} />
           ),
         }}
-      />*/}
+      />
+
+      <Tab.Screen
+        component={SettingStack}
+        name="setting"
+        options={{
+          tabBarIcon: ({color}) => (
+            // <Entypo name="setting" color={color} size={25} />
+            <Entypo name="menu" color={color} size={25} />
+          ),
+        }}
+      />
     </Tab.Navigator>
   )
 }
