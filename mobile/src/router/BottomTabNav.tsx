@@ -12,14 +12,14 @@ const BottomTabNav = () => {
       tabBarOptions={{
         showLabel: false,
         // inactiveTintColor: '#ffbd7d',
-        // activeTintColor: '#e47911',
+        activeTintColor: '#105492',
       }}
     >
       <Tab.Screen
         component={MarketStack}
         name="market"
         options={{
-          tabBarIcon: ({ color }) => <Entypo name="home" color={color} size={25} />,
+          tabBarIcon: ({ color }) => <Entypo name="home" color={color} size={30} />,
         }}
       />
 
@@ -27,7 +27,7 @@ const BottomTabNav = () => {
         component={SettingStack}
         name="setting"
         options={{
-          tabBarIcon: ({ color }) => <Entypo name="menu" color={color} size={25} />,
+          tabBarIcon: ({ color }) => <Entypo name="menu" color={color} size={30} />,
         }}
       />
     </Tab.Navigator>
