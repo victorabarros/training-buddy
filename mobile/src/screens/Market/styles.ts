@@ -10,6 +10,12 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 28,
   },
+  text: {
+    fontSize: 13,
+    lineHeight: 19,
+    textAlign: 'justify',
+    fontFamily: 'monospace',
+  },
 })
 
 export default styles

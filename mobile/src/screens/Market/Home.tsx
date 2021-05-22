@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import Svg, { Ellipse } from 'react-native-svg'
 import Entypo from 'react-native-vector-icons/Entypo'
 import styles from './styles'
@@ -9,32 +9,35 @@ const MarketHome = () => (
     {/* header */}
     <View>
       <View style={extraStyles.topContainer}>
-        <Text style={styles.title}>Training Buddy</Text>
-        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-          <View style={[extraStyles.topButton, { backgroundColor: '#898989' }]}>
+        <Text style={[styles.title, { flex: 4 }]}>Training Buddy</Text>
+
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between', flex: 3 }}>
+          <TouchableOpacity style={[extraStyles.topButton, { backgroundColor: '#898989' }]}>
             <Entypo name="user" size={35} />
-          </View>
-          <View style={[extraStyles.topButton, { backgroundColor: 'white' }]}>
-            <Entypo name="search" size={35} />
-          </View>
+          </TouchableOpacity>
+          <TouchableOpacity style={[extraStyles.topButton, { backgroundColor: 'white' }]}>
+            {/* <Entypo name="search" size={35} /> */}
+            <Entypo name="menu" size={35} />
+          </TouchableOpacity>
         </View>
 
-        <View style={extraStyles.topBar}>
-          {['Mais procurados', 'Recentes', 'Aluguel'].map(label => (
-            <View
-              key={`view=${label.toLowerCase().replace(' ', '-')}`}
-              style={extraStyles.topBarButton}
-            >
-              <Text
-                key={`text=${label.toLowerCase().replace(' ', '-')}`}
-                style={{ color: 'white', fontSize: 11 }}
+        <View>
+          <View style={extraStyles.topBar}>
+            {['Mais procurados', 'Recentes', 'Aluguel'].map(label => (
+              <TouchableOpacity
+                key={`view=${label.toLowerCase().replace(' ', '-')}`}
+                style={extraStyles.topBarButton}
               >
-                {label}
-              </Text>
-            </View>
-          ))}
+                <Text
+                  key={`text=${label.toLowerCase().replace(' ', '-')}`}
+                  style={[styles.text, { color: 'white', fontSize: 11 }]}
+                >
+                  {label}
+                </Text>
+              </TouchableOpacity>
+            ))}
+          </View>
         </View>
-
       </View>
 
       <Svg height="65" width="100%">
@@ -49,7 +52,6 @@ const extraStyles = StyleSheet.create({
     height: 290,
     backgroundColor: '#3991E2',
     padding: 25,
-    justifyContent: 'space-between',
   },
   topButton: {
     height: 50,
