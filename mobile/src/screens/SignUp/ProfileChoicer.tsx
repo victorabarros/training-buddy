@@ -38,7 +38,7 @@ const ProfileChoicer = () => {
           <View
             style={[styles.imageContainer, profile === Profile.Teacher ? { opacity: 0.5 } : {}]}
           >
-            <Image style={styles.image} source={require('../../../assets/Teacher.png')} />
+            <Image style={styles.image} source={require('../../../assets/teacher.png')} />
           </View>
           <Text style={[styles.text, { textAlign: 'center' }]}>PROFESSOR</Text>
         </TouchableOpacity> */}
@@ -46,7 +46,7 @@ const ProfileChoicer = () => {
           <View
             style={[styles.imageContainer, profile === Profile.Student ? { opacity: 0.5 } : {}]}
           >
-            <Image style={styles.image} source={require('../../../assets/Student.png')} />
+            <Image style={styles.image} source={require('../../../assets/student.png')} />
           </View>
           <Text style={[styles.text, { textAlign: 'center' }]}>ALUNO</Text>
         </TouchableOpacity>
