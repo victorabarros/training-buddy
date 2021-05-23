@@ -10,10 +10,16 @@ const Header = () => (
       <Text style={[styles.title, { flex: 4 }]}>Training Buddy</Text>
 
       <View style={{ flexDirection: 'row', justifyContent: 'space-between', flex: 3 }}>
-        <TouchableOpacity style={[extraStyles.topButton, { backgroundColor: '#898989' }]} onPress={() => alert('not implemented yeat')}>
+        <TouchableOpacity
+          style={[extraStyles.topButton, { backgroundColor: '#898989' }]}
+          onPress={() => alert('not implemented yeat')}
+        >
           <Entypo name="user" size={35} />
         </TouchableOpacity>
-        <TouchableOpacity style={[extraStyles.topButton, { backgroundColor: 'white' }]} onPress={() => alert('not implemented yeat')}>
+        <TouchableOpacity
+          style={[extraStyles.topButton, { backgroundColor: 'white' }]}
+          onPress={() => alert('not implemented yeat')}
+        >
           {/* <Entypo name="search" size={35} /> */}
           <Entypo name="menu" size={35} />
         </TouchableOpacity>
@@ -45,29 +51,28 @@ const Header = () => (
   </View>
 )
 
-
 const MarketHome = () => (
   <View style={styles.root}>
     <Header />
 
-    <View style={{paddingHorizontal: 25}}>
+    <View style={{ paddingHorizontal: 25 }}>
       {/* body */}
       <View>
-      <Text>Aulas mais procuradas</Text>
-      <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-        {['Canoagem', 'Surf', 'Tênis'].map((sport) => (
-          <Text key={`top-trending-${sport}`}>{sport}</Text>
-        ))}
+        <Text>Aulas mais procuradas</Text>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+          {['Canoagem', 'Surf', 'Tênis'].map(sport => (
+            <Text key={`top-trending-${sport}`}>{sport}</Text>
+          ))}
+        </View>
       </View>
-    </View>
 
-    <View>
-      <Text>Recentes</Text>
-    </View>
+      <View>
+        <Text>Recentes</Text>
+      </View>
 
-    <View>
-      <Text>Aluguel de equipamentos e roupas</Text>
-    </View>
+      <View>
+        <Text>Aluguel de equipamentos e roupas</Text>
+      </View>
     </View>
   </View>
 )
