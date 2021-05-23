@@ -102,8 +102,10 @@ const MarketHome = () => {
 
       <ScrollView style={{ paddingHorizontal: 25 }}>
         {/* body */}
-        <View>
-          <Text>Aulas mais procuradas</Text>
+        <View style={{ marginVertical: 15 }}>
+          <Text style={[styles.text, { fontWeight: 'bold', fontSize: 16 }]}>
+            Aulas mais procuradas
+          </Text>
           <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
             {toTrendingSports.map(sport => (
               <CardItem key={`top-trending-${sport}`} name={sport} />
@@ -111,8 +113,8 @@ const MarketHome = () => {
           </View>
         </View>
 
-        <View>
-          <Text>Recentes</Text>
+        <View style={{ marginVertical: 15 }}>
+          <Text style={[styles.text, { fontWeight: 'bold', fontSize: 16 }]}>Recentes</Text>
           <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
             {newestSports.map(sport => (
               <CardItem key={`top-trending-${sport}`} name={sport} />
@@ -120,8 +122,10 @@ const MarketHome = () => {
           </View>
         </View>
 
-        <View>
-          <Text>Aluguel de equipamentos e roupas</Text>
+        <View style={{ marginVertical: 15 }}>
+          <Text style={[styles.text, { fontWeight: 'bold', fontSize: 16 }]}>
+            Aluguel de equipamentos e roupas
+          </Text>
           <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
             {itemToRent.map(sport => (
               <CardItem key={`top-trending-${sport}`} name={sport} />
