@@ -5,8 +5,8 @@ import BottomTab from '../../components/BottomTab'
 import styles from './styles'
 
 enum Profile {
-  teacher = 'teacher',
-  student = 'student',
+  Teacher = 'Teacher',
+  Student = 'Student',
 }
 
 const ProfileChoicer = () => {
@@ -34,19 +34,19 @@ const ProfileChoicer = () => {
 
       <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
         {/* IN FIRST MOMENT ONLY SIGNUP FOR STUDENTS, USE justifyContent: 'space-between' */}
-        {/* <TouchableOpacity onPress={() => setProfile(Profile.teacher)}>
+        {/* <TouchableOpacity onPress={() => setProfile(Profile.Teacher)}>
           <View
-            style={[styles.imageContainer, profile === Profile.teacher ? { opacity: 0.5 } : {}]}
+            style={[styles.imageContainer, profile === Profile.Teacher ? { opacity: 0.5 } : {}]}
           >
-            <Image style={styles.image} source={require('../../../assets/teacher.png')} />
+            <Image style={styles.image} source={require('../../../assets/Teacher.png')} />
           </View>
           <Text style={[styles.text, { textAlign: 'center' }]}>PROFESSOR</Text>
         </TouchableOpacity> */}
-        <TouchableOpacity onPress={() => setProfile(Profile.student)}>
+        <TouchableOpacity onPress={() => setProfile(Profile.Student)}>
           <View
-            style={[styles.imageContainer, profile === Profile.student ? { opacity: 0.5 } : {}]}
+            style={[styles.imageContainer, profile === Profile.Student ? { opacity: 0.5 } : {}]}
           >
-            <Image style={styles.image} source={require('../../../assets/student.png')} />
+            <Image style={styles.image} source={require('../../../assets/Student.png')} />
           </View>
           <Text style={[styles.text, { textAlign: 'center' }]}>ALUNO</Text>
         </TouchableOpacity>
