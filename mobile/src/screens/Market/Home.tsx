@@ -54,8 +54,14 @@ const imageSource = (name: string) => {
       return require(`../../../assets/sport/surf.png`)
     case 'canoagem':
       return require(`../../../assets/sport/canoagem.png`)
+    case 'kitesurf':
+      return require(`../../../assets/sport/kitesurf.png`)
+    case 'tênis':
+      return require(`../../../assets/sport/tenis.png`)
     case 'raquete':
       return require(`../../../assets/rent/raquete.png`)
+    case 'prancha':
+      return require(`../../../assets/rent/prancha.png`)
   }
 }
 
@@ -66,7 +72,14 @@ interface CardProps extends ViewProps {
 const CardItem = ({ name }: CardProps) => {
   return (
     <TouchableOpacity
-      style={{ width: 80, height: 100, elevation: 5, marginVertical: 10, borderRadius: 20 }}
+      style={{
+        width: 80,
+        height: 100,
+        elevation: 5,
+        marginVertical: 10,
+        borderRadius: 20,
+        marginHorizontal: 15,
+      }}
       onPress={() => alert('not implemented yeat')}
     >
       <Image source={imageSource(name)} style={{ width: 80, height: 100, borderRadius: 20 }} />
@@ -87,10 +100,26 @@ const CardItem = ({ name }: CardProps) => {
   )
 }
 
+interface ContentSessionProps extends ViewProps {
+  title: string
+  items: string[]
+}
+
+const ContentSession = ({ title, items }: ContentSessionProps) => (
+  <View style={{ marginVertical: 15 }}>
+    <Text style={[styles.text, { fontWeight: 'bold', fontSize: 16 }]}>{title}</Text>
+    <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+      {items.map(item => (
+        <CardItem key={`${title.toLocaleLowerCase().replace(' ', '-')}-${item}`} name={item} />
+      ))}
+    </ScrollView>
+  </View>
+)
+
 const MarketHome = () => {
   const toTrendingSports = ['Canoagem', 'Surf', 'Tênis']
-  const newestSports = ['Canoagem', 'Surf', 'Tênis']
-  const itemToRent = ['Prancha', 'Raquete', 'Roupa']
+  const newestSports = ['Canoagem', 'Surf', 'Tênis', 'Kitesurf']
+  const itemToRent = ['Prancha', 'Raquete']
 
   return (
     <View style={styles.root}>
@@ -98,36 +127,9 @@ const MarketHome = () => {
 
       <ScrollView style={{ paddingHorizontal: 25 }}>
         {/* body */}
-        <View style={{ marginVertical: 15 }}>
-          <Text style={[styles.text, { fontWeight: 'bold', fontSize: 16 }]}>
-            Aulas mais procuradas
-          </Text>
-          <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-            {toTrendingSports.map(sport => (
-              <CardItem key={`top-trending-${sport}`} name={sport} />
-            ))}
-          </View>
-        </View>
-
-        <View style={{ marginVertical: 15 }}>
-          <Text style={[styles.text, { fontWeight: 'bold', fontSize: 16 }]}>Recentes</Text>
-          <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-            {newestSports.map(sport => (
-              <CardItem key={`top-trending-${sport}`} name={sport} />
-            ))}
-          </View>
-        </View>
-
-        <View style={{ marginVertical: 15 }}>
-          <Text style={[styles.text, { fontWeight: 'bold', fontSize: 16 }]}>
-            Aluguel de equipamentos e roupas
-          </Text>
-          <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-            {itemToRent.map(sport => (
-              <CardItem key={`top-trending-${sport}`} name={sport} />
-            ))}
-          </View>
-        </View>
+        <ContentSession title={'Aulas mais procuradas'} items={toTrendingSports} />
+        <ContentSession title={'Recentes'} items={newestSports} />
+        <ContentSession title={'Aluguel de equipamentos e roupas'} items={itemToRent} />
       </ScrollView>
     </View>
   )
