@@ -1,6 +1,6 @@
 import React from 'react'
-import { View, Text, TouchableOpacity, StyleSheet, ViewProps } from 'react-native'
-import Entypo from 'react-native-vector-icons/Entypo'
+import { View, Text, TouchableOpacity, ViewProps } from 'react-native'
+import ProfileButton from '../../components/ProfileButton'
 import styles from './styles'
 
 interface OptionsContainerProps extends ViewProps {
@@ -29,9 +29,7 @@ const OptionsContainer = ({ title, options }: OptionsContainerProps) => (
 
 const SettingView = () => (
   <View style={styles.root}>
-    <TouchableOpacity style={styles.topButton} onPress={() => alert('not implemented yeat')}>
-      <Entypo name="user" size={35} color="white" />
-    </TouchableOpacity>
+    <ProfileButton size={50} backgroundColor={'#105492'} color={'white'} />
 
     <View style={{ alignItems: 'center' }}>
       <OptionsContainer

@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity, ViewProps, Image } from 'reac
 import { ScrollView } from 'react-native-gesture-handler'
 import Svg, { Ellipse } from 'react-native-svg'
 import Entypo from 'react-native-vector-icons/Entypo'
+import ProfileButton from '../../components/ProfileButton'
 import styles from './styles'
 
 const Header = () => (
@@ -11,12 +12,7 @@ const Header = () => (
       <Text style={[styles.title, { flex: 4 }]}>Training Buddy</Text>
 
       <View style={{ flexDirection: 'row', justifyContent: 'space-between', flex: 3 }}>
-        <TouchableOpacity
-          style={[extraStyles.topButton, { backgroundColor: '#898989' }]}
-          onPress={() => alert('not implemented yeat')}
-        >
-          <Entypo name="user" size={35} />
-        </TouchableOpacity>
+        <ProfileButton size={50} backgroundColor={'#898989'} color={'black'} />
         <TouchableOpacity
           style={[extraStyles.topButton, { backgroundColor: 'white' }]}
           onPress={() => alert('not implemented yeat')}
