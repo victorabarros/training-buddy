@@ -46,9 +46,8 @@ yarn add prettier
 
 ## TODO
 
+- mobile
+  - add a image to loading app
+  - build it and install pkg on smartphone
 - backend
   - code it with typescript and mongodb
-
-- web
-  - remake with [nextjs](https://nextjs.org/)
-  - deploy on vercel

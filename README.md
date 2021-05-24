@@ -4,7 +4,11 @@ Training buddy it's a marketplace for outdoor sports, where coaches and athletic
 
 This project has the only purpose to develop programming skills.
 
-## design
+## Mobile
+
+[![Alt Text](https://media.giphy.com/media/uM7tIceAITWDrvDLlB/giphy.gif)](https://snack.expo.io/@victorbarros1130/github.com-victorabarros-training-buddy:mobile)
+
+## Design
 
 https://www.figma.com/file/O3H7MD7FYATO8eolivLBTB/Projeto-Curso-UI?node-id=69%3A102
 
