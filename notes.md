@@ -21,6 +21,7 @@ personal notes
   - write `.prettierrc.json`
   - add script to package.json `"prettier": "prettier --write ."`
   - exec `yarn prettier`
+- building app: https://docs.expo.io/distribution/building-standalone-apps/
 
 ### web
 
@@ -48,6 +49,7 @@ yarn add prettier
 
 - mobile
   - add a image to loading app
+  - icon
   - build it and install pkg on smartphone
 - backend
   - code it with typescript and mongodb

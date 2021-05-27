@@ -6,6 +6,8 @@ This project has the only purpose to develop programming skills.
 
 ## Mobile
 
+https://expo.io/@victorbarros1130/training-buddy-mobile-app
+
 [![Alt Text](https://media.giphy.com/media/uM7tIceAITWDrvDLlB/giphy.gif)](https://snack.expo.io/@victorbarros1130/github.com-victorabarros-training-buddy:mobile)
 
 ## Design

@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "training-buddy-mobile-app",
+    "name": "Training Buddy",
     "slug": "training-buddy-mobile-app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -13,11 +13,17 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
+      "bundleIdentifier": "com.trainingBuddy.mobile",
+      "buildNumber": "1",
       "supportsTablet": true
     },
     "android": {
+      "package": "com.trainingBuddy.mobile",
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
@@ -25,6 +31,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "",
+    "githubUrl": "https://github.com/victorabarros/training-buddy"
   }
 }
