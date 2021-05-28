@@ -26,6 +26,8 @@ personal notes
 
 ### web
 
+- `yarn create next-app --example with-typescript training-buddy-web-app`
+
 ```sh
 make debug
 npx create-react-app 05-primeiro-projeto-react --template=typescript
@@ -51,6 +53,5 @@ yarn add prettier
 - mobile
   - add a image to loading app
   - icon
-  - build it and install pkg on smartphone
 - backend
   - code it with typescript and mongodb
