@@ -26,7 +26,6 @@ __generated__
 
 ### ReactNative.Android Stack ###
 # Built application files
-*.apk
 *.aar
 *.ap_
 *.aab
