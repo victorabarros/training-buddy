@@ -22,6 +22,7 @@ personal notes
   - add script to package.json `"prettier": "prettier --write ."`
   - exec `yarn prettier`
 - building app: https://docs.expo.io/distribution/building-standalone-apps/
+  - exec `expo build:android -t apk`
 
 ### web
 
