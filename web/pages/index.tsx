@@ -1,15 +1,15 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import TFooter from "../components/TFooter"
+import THead from "../components/THead"
+import TLayerOptions from "../components/TLayerOptions"
 
 const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
-  </Layout>
+  <>
+    <THead />
+    <TLayerOptions title={'Aulas mais procuradas'} options={['Canoagem', 'Surf', 'Tenis', 'Funcional']} />
+    <TLayerOptions title={'Recentes'} options={['Pranchas', 'Natação', 'Bicicletas', 'Corrida']} />
+    <TLayerOptions title={'Aluguel de equipamentos e roupas'} options={['Pranchas', 'Raquete', 'Roupa', 'Remo']} />
+    <TFooter />
+  </>
 )
 
 export default IndexPage
