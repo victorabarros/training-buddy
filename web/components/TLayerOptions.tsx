@@ -10,7 +10,7 @@ const TLayerOptions = ({ title, options }: Props) => (
   <div className={styles.layerOptions}>
     <h2>{title}</h2>
     {options.map(option => (
-      <h5>{option}</h5>
+      <h5 key={`option-${title}-${option}`}>{option}</h5>
     ))}
   </div>
 )
